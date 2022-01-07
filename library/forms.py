@@ -13,14 +13,14 @@ class ContactusForm(forms.Form):
 class AdminSigupForm(forms.ModelForm):
     class Meta:
         model=User
-        fields=['first_name','last_name','username','password']
+        fields=['first_name','last_name','username','email','password',]
 
 
 
 class StudentUserForm(forms.ModelForm):
     class Meta:
         model=User
-        fields=['first_name','last_name','username','password']
+        fields=['first_name','last_name','username','email','password',]
 
 class StudentExtraForm(forms.ModelForm):
     class Meta:

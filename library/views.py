@@ -135,8 +135,8 @@ def viewissuedbook_view(request):
         print(date.today())
         d=days.days
         fine=0
-        if d>15:
-            day=d-15
+        if d>7:
+            day=d-7
             fine=day*10
 
 
@@ -177,8 +177,8 @@ def viewissuedbookbystudent(request):
         print(date.today())
         d=days.days
         fine=0
-        if d>15:
-            day=d-15
+        if d>7:
+            day=d-7
             fine=day*10
         t=(issdate,expdate,fine)
         li2.append(t)

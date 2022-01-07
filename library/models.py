@@ -6,6 +6,7 @@ class StudentExtra(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     enrollment = models.CharField(max_length=40)
     branch = models.CharField(max_length=40)
+    #Contact_No = models.PositiveIntegerField(max_length=10)
     #used in issue book
     def __str__(self):
         return self.user.first_name+'['+str(self.enrollment)+']'
@@ -39,7 +40,7 @@ class Book(models.Model):
 
 
 def get_expiry():
-    return datetime.today() + timedelta(days=15)
+    return datetime.today() + timedelta(days=7)
 class IssuedBook(models.Model):
     #moved this in forms.py
     #enrollment=[(student.enrollment,str(student.get_name)+' ['+str(student.enrollment)+']') for student in StudentExtra.objects.all()]
